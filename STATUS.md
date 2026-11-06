@@ -24,9 +24,18 @@ Legend: **V** = implemented and verified here · **I** = implemented, NOT execut
 | 7 | Locust results, cost, SLO, review table | P | `scripts/cost.py` ready |
 | – | `report/report.pdf` | draft only; measured sections PENDING | |
 | – | handwritten reflection scan `<ROLL>.pdf` | P | only you can produce it |
-| – | GitHub repo, Release, tag `final` | P | needs your credentials |
+| – | GitHub repository and main branch | V | Repository created; 62 files pushed successfully. Initial commit: d49ad94 |
+| – | GitHub Release with model assets | P | Pending trained model files and checksums |
+| – | Git tag `final` | P | Create only after all work and submission files are finalized |
 
-## Repository verification (checked at hand-over)
-- GitHub profile https://github.com/Sagarwal-bit exists.
-- https://github.com/Sagarwal-bit/cloud-command-parser returned an error when fetched, so it is **not confirmed to exist or be public**.
-  Nothing has been pushed, no Release exists and there is no `final` tag. Create the repo (public, or visible to the examiner) before pushing.
+## Repository verification (updated 2026-11-06)
+
+- GitHub profile: https://github.com/Sagarwal-bit
+- Repository: https://github.com/Sagarwal-bit/cloud-command-parser
+- Repository visibility: Public
+- Default branch: `main`
+- Initial commit: `d49ad94`
+- Project files: 62 files successfully pushed to GitHub.
+- GitHub Release: Pending.
+- Final tag: Pending.
+- Model training and deployment experiments: Pending.
