@@ -1,0 +1,20 @@
+# Single source of truth for `make train`. Nothing else is read.
+base_model: EleutherAI/pythia-70m
+train_file: data/train.jsonl        # cleaned teacher dataset (datasets/v1/train.jsonl)
+max_records: 1500                   # assignment limit: first 1,500 records
+learning_rate: 1.0e-4
+batch_size: 8
+max_seq_length: 128
+output_dir: model_out
+loss_csv: training/loss.csv
+threads: 4                          # CPU threads for PyTorch
+mask_prompt_in_loss: true           # loss only on the teacher's JSON tokens
+versions:                           # `make train VERSION=v1|v2`
+  v1: {seed: 42, epochs: 3}
+  v2: {seed: 7,  epochs: 4}
+library_versions:                   # versions used to produce the models (verified at run time)
+  python: "3.11"
+  torch: "2.4.1"
+  transformers: "4.44.2"
+  tokenizers: "0.19.1"
+  numpy: "1.26.4"

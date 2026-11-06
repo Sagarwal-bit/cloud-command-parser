@@ -1,0 +1,100 @@
+{"id": "V001", "text": "remove the upcoming calendar event", "intent": "calendar_remove", "date": null, "time": null, "place": null}
+{"id": "V002", "text": "need an alarm set for sunday at five in the morning", "intent": "alarm_set", "date": "sunday", "time": "five", "place": null}
+{"id": "V003", "text": "give me the time at washington right now", "intent": "datetime_query", "date": null, "time": null, "place": "washington"}
+{"id": "V004", "text": "what time does mondays meeting start", "intent": "calendar_query", "date": "mondays", "time": null, "place": null}
+{"id": "V005", "text": "set my alarm for tuesday at six pm", "intent": "alarm_set", "date": "tuesday", "time": "six pm", "place": null}
+{"id": "V006", "text": "remind me about my meeting this afternoon please", "intent": "calendar_set", "date": null, "time": null, "place": null}
+{"id": "V007", "text": "what day of the week is november fourteenth", "intent": "datetime_query", "date": "november fourteenth", "time": null, "place": null}
+{"id": "V008", "text": "do i have any appointments this weekend", "intent": "calendar_query", "date": null, "time": "weekend", "place": null}
+{"id": "V009", "text": "what time is it in the central time zone", "intent": "datetime_query", "date": null, "time": null, "place": null}
+{"id": "V010", "text": "when is dale's birthday", "intent": "calendar_query", "date": "birthday", "time": null, "place": null}
+{"id": "V011", "text": "how's the weather going to be this week", "intent": "weather_query", "date": "this week", "time": null, "place": null}
+{"id": "V012", "text": "give me the time in pst", "intent": "datetime_query", "date": null, "time": null, "place": null}
+{"id": "V013", "text": "any activity in the area", "intent": "recommendation_events", "date": null, "time": null, "place": null}
+{"id": "V014", "text": "read my next reminders for this afternoon", "intent": "calendar_query", "date": null, "time": null, "place": null}
+{"id": "V015", "text": "delete my whole calendar for today", "intent": "calendar_remove", "date": "today", "time": null, "place": null}
+{"id": "V016", "text": "format data from calendar", "intent": "calendar_remove", "date": null, "time": null, "place": null}
+{"id": "V017", "text": "wake me up at this time", "intent": "alarm_set", "date": null, "time": null, "place": null}
+{"id": "V018", "text": "remind me of my sister's birthday party tomorrow an hour before it starts", "intent": "calendar_set", "date": "tomorrow", "time": null, "place": null}
+{"id": "V019", "text": "what time is the next event scheduled", "intent": "calendar_query", "date": null, "time": null, "place": null}
+{"id": "V020", "text": "alexa state the weather in our city", "intent": "weather_query", "date": null, "time": null, "place": null}
+{"id": "V021", "text": "what's going on around me", "intent": "recommendation_events", "date": null, "time": null, "place": null}
+{"id": "V022", "text": "remind me for making call to all participants", "intent": "calendar_set", "date": null, "time": null, "place": null}
+{"id": "V023", "text": "set bob's birthday for every june third", "intent": "calendar_set", "date": "every june third", "time": null, "place": null}
+{"id": "V024", "text": "what date is justin's school play", "intent": "calendar_query", "date": null, "time": null, "place": null}
+{"id": "V025", "text": "what time is it now in new york", "intent": "datetime_query", "date": null, "time": null, "place": "new york"}
+{"id": "V026", "text": "what is the five days forecast looking like in new york city", "intent": "weather_query", "date": "five days", "time": null, "place": "new york city"}
+{"id": "V027", "text": "what meetings are on my calendar today", "intent": "calendar_query", "date": "today", "time": null, "place": null}
+{"id": "V028", "text": "what is the weather at home", "intent": "weather_query", "date": null, "time": null, "place": "home"}
+{"id": "V029", "text": "what alarms are on right now", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V030", "text": "set alarm at ten am", "intent": "alarm_set", "date": null, "time": "ten am", "place": null}
+{"id": "V031", "text": "fun things to do today", "intent": "recommendation_events", "date": "today", "time": null, "place": null}
+{"id": "V032", "text": "how many days are left in this year", "intent": "datetime_query", "date": "this year", "time": null, "place": null}
+{"id": "V033", "text": "set an eight hundred am alarm for next tuesday", "intent": "alarm_set", "date": "tuesday", "time": "eight hundred am", "place": null}
+{"id": "V034", "text": "do i have any new tinder matches", "intent": "calendar_query", "date": null, "time": null, "place": null}
+{"id": "V035", "text": "remind me about my alarms today", "intent": "alarm_query", "date": "today", "time": null, "place": null}
+{"id": "V036", "text": "is my alarm set for seven am", "intent": "alarm_set", "date": null, "time": "seven am", "place": null}
+{"id": "V037", "text": "remind me about the office meeting tomorrow at seven", "intent": "calendar_set", "date": "tomorrow", "time": "seven", "place": null}
+{"id": "V038", "text": "can you set the event for monday at six at mcdonalds", "intent": "calendar_set", "date": "monday", "time": "six", "place": "mcdonalds"}
+{"id": "V039", "text": "i am no longer going to wyatts birthday party", "intent": "calendar_remove", "date": null, "time": null, "place": null}
+{"id": "V040", "text": "set an alarm in an hour's time", "intent": "alarm_set", "date": null, "time": "hour's time", "place": null}
+{"id": "V041", "text": "olly what time is it in california", "intent": "datetime_query", "date": null, "time": null, "place": "california"}
+{"id": "V042", "text": "what time is it in beijing", "intent": "datetime_query", "date": null, "time": null, "place": "beijing"}
+{"id": "V043", "text": "list my different alarm", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V044", "text": "what day is the fifteenth", "intent": "datetime_query", "date": "the fifteenth", "time": null, "place": null}
+{"id": "V045", "text": "set an alarm for next tuesdays meeting", "intent": "alarm_set", "date": "tuesdays", "time": null, "place": null}
+{"id": "V046", "text": "who will be attending the meeting this friday", "intent": "calendar_query", "date": "this friday", "time": null, "place": null}
+{"id": "V047", "text": "what are the show timings", "intent": "calendar_query", "date": null, "time": null, "place": null}
+{"id": "V048", "text": "remove my event at one pm in my calendar", "intent": "calendar_remove", "date": null, "time": "one pm", "place": null}
+{"id": "V049", "text": "what is the address for the event scheduled on the first of january alexa", "intent": "calendar_query", "date": "first of january", "time": null, "place": null}
+{"id": "V050", "text": "add on my calendar for today joe smith at one pm", "intent": "calendar_set", "date": "today", "time": "one pm", "place": null}
+{"id": "V051", "text": "can you tell me about the alarm called bed", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V052", "text": "what kind of musical events are happening around here this week", "intent": "recommendation_events", "date": "this week", "time": null, "place": null}
+{"id": "V053", "text": "tell me about things to do in london", "intent": "recommendation_events", "date": null, "time": null, "place": "london"}
+{"id": "V054", "text": "set an alarm for four pm tuesday", "intent": "alarm_set", "date": "tuesday", "time": "four pm", "place": null}
+{"id": "V055", "text": "what will be weather for tomorrow in mumbai", "intent": "weather_query", "date": "tomorrow", "time": null, "place": "mumbai"}
+{"id": "V056", "text": "what's interesting around here", "intent": "recommendation_events", "date": null, "time": null, "place": null}
+{"id": "V057", "text": "remove the hip show from my schedule on april second", "intent": "calendar_remove", "date": "april second", "time": null, "place": null}
+{"id": "V058", "text": "tap start and then select settings", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V059", "text": "what day of the week is the twenty second march", "intent": "datetime_query", "date": "twenty second march", "time": null, "place": null}
+{"id": "V060", "text": "what events are going on near me", "intent": "recommendation_events", "date": null, "time": null, "place": null}
+{"id": "V061", "text": "should i bring warm clothes", "intent": "weather_query", "date": null, "time": null, "place": null}
+{"id": "V062", "text": "clear my schedule for today", "intent": "calendar_remove", "date": "today", "time": null, "place": null}
+{"id": "V063", "text": "tell me about the events near me", "intent": "recommendation_events", "date": null, "time": null, "place": null}
+{"id": "V064", "text": "is the farmers market open this weekend in iowa", "intent": "recommendation_events", "date": "this weekend", "time": null, "place": "iowa"}
+{"id": "V065", "text": "show me upcoming events in the quad cities", "intent": "recommendation_events", "date": null, "time": null, "place": "quad cities"}
+{"id": "V066", "text": "remind me at this time", "intent": "calendar_set", "date": null, "time": null, "place": null}
+{"id": "V067", "text": "is weather normal today", "intent": "weather_query", "date": "today", "time": null, "place": null}
+{"id": "V068", "text": "what alarms are set for this week", "intent": "alarm_query", "date": "this week", "time": null, "place": null}
+{"id": "V069", "text": "things to do in my area", "intent": "recommendation_events", "date": null, "time": null, "place": null}
+{"id": "V070", "text": "will it rain on friday", "intent": "weather_query", "date": "friday", "time": null, "place": null}
+{"id": "V071", "text": "olly can you please add my dinner reservations to my calendar", "intent": "calendar_set", "date": null, "time": null, "place": null}
+{"id": "V072", "text": "let me know if there is a town meeting monday", "intent": "calendar_query", "date": "monday", "time": null, "place": null}
+{"id": "V073", "text": "erase all content in my calendar", "intent": "calendar_remove", "date": null, "time": null, "place": null}
+{"id": "V074", "text": "what is the date next saturday", "intent": "datetime_query", "date": "saturday", "time": null, "place": null}
+{"id": "V075", "text": "find and delete all of my weekend events with evan parker", "intent": "calendar_remove", "date": null, "time": "weekend", "place": null}
+{"id": "V076", "text": "alarm for ten am", "intent": "alarm_set", "date": null, "time": "ten am", "place": null}
+{"id": "V077", "text": "how many other bands will be performing at the zach brown concert on june third", "intent": "calendar_query", "date": "june third", "time": null, "place": null}
+{"id": "V078", "text": "set reminder for meeting with john on wednesday at nine am", "intent": "calendar_set", "date": "wednesday", "time": "nine am", "place": null}
+{"id": "V079", "text": "what is there to do in new york city", "intent": "recommendation_events", "date": null, "time": null, "place": "new york city"}
+{"id": "V080", "text": "please list active alarms", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V081", "text": "what day will it be sunny", "intent": "weather_query", "date": null, "time": null, "place": null}
+{"id": "V082", "text": "tell me time of alarm you set", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V083", "text": "do i need to take the umbrella out today", "intent": "weather_query", "date": "today", "time": null, "place": null}
+{"id": "V084", "text": "can you tell me what alarms i have set", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V085", "text": "hi to all", "intent": "calendar_set", "date": null, "time": null, "place": null}
+{"id": "V086", "text": "olly remind me about my next meeting a few hours ahead of time", "intent": "calendar_set", "date": null, "time": null, "place": null}
+{"id": "V087", "text": "please remove the doctor appointment in my calendar for february twelfth at nine am", "intent": "calendar_remove", "date": "february twelfth", "time": "nine am", "place": null}
+{"id": "V088", "text": "please read me my alarms", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V089", "text": "remind me at six thirty pm", "intent": "alarm_set", "date": null, "time": "six thirty pm", "place": null}
+{"id": "V090", "text": "i need to set an alarm for next friday at noon", "intent": "alarm_set", "date": "friday", "time": null, "place": null}
+{"id": "V091", "text": "what is the time in paris", "intent": "datetime_query", "date": null, "time": null, "place": "paris"}
+{"id": "V092", "text": "add a meeting with francine for two pm tomorrow", "intent": "calendar_set", "date": "tomorrow", "time": "two pm", "place": null}
+{"id": "V093", "text": "did i set an alarm to wake up in the morning", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V094", "text": "will there be snow this week", "intent": "weather_query", "date": "this week", "time": null, "place": null}
+{"id": "V095", "text": "can you set my alarm for seven thirty am", "intent": "alarm_set", "date": null, "time": "seven thirty am", "place": null}
+{"id": "V096", "text": "how is the weather in this week", "intent": "weather_query", "date": "this week", "time": null, "place": null}
+{"id": "V097", "text": "do i have any alarms set", "intent": "alarm_query", "date": null, "time": null, "place": null}
+{"id": "V098", "text": "delete the next event on the calendar", "intent": "calendar_remove", "date": null, "time": null, "place": null}
+{"id": "V099", "text": "just to confirm you set the alarm to go off at eight hundred", "intent": "alarm_query", "date": null, "time": "eight hundred", "place": null}
+{"id": "V100", "text": "remove upcoming task", "intent": "calendar_remove", "date": null, "time": null, "place": null}

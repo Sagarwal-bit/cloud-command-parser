@@ -1,0 +1,13 @@
+{
+  "inbound": [
+    {"rule": 100, "protocol": "all", "port_from": 0,    "port_to": 65535, "cidr": "198.51.100.0/24", "action": "deny"},
+    {"rule": 110, "protocol": "tcp", "port_from": 80,   "port_to": 80,    "cidr": "0.0.0.0/0",       "action": "allow"},
+    {"rule": 120, "protocol": "tcp", "port_from": 443,  "port_to": 443,   "cidr": "0.0.0.0/0",       "action": "allow"},
+    {"rule": 130, "protocol": "tcp", "port_from": 22,   "port_to": 22,    "cidr": "10.20.5.128/27",  "action": "allow"},
+    {"rule": 140, "protocol": "tcp", "port_from": 1024, "port_to": 65535, "cidr": "10.20.0.0/22",    "action": "allow"}
+  ],
+  "outbound": [
+    {"rule": 100, "protocol": "tcp", "port_from": 8000, "port_to": 8000,  "cidr": "10.20.0.0/22",    "action": "allow"},
+    {"rule": 110, "protocol": "tcp", "port_from": 1024, "port_to": 65535, "cidr": "0.0.0.0/0",       "action": "allow"}
+  ]
+}

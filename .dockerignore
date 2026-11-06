@@ -1,0 +1,16 @@
+.git
+.github
+.venv
+.secrets
+model_out
+results
+report
+reflection
+models
+training
+worker
+tests
+tools
+k8s
+*.tar.gz
+__pycache__

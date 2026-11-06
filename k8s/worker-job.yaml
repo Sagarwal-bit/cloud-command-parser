@@ -1,0 +1,25 @@
+# Two teacher-labelling workers running at the same time (Indexed Job: index 0 and 1) in `pipeline`.
+# Ollama runs on the laptop (OLLAMA_HOST=0.0.0.0 ollama serve) and is reached via host.k3d.internal.
+apiVersion: batch/v1
+kind: Job
+metadata: {name: teacher-labelling, namespace: pipeline}
+spec:
+  completionMode: Indexed
+  completions: 2
+  parallelism: 2
+  backoffLimit: 6
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: worker
+          image: command-parser-worker:1.0
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: SHARD_INDEX
+              valueFrom: {fieldRef: {fieldPath: "metadata.annotations['batch.kubernetes.io/job-completion-index']"}}
+            - {name: SHARD_COUNT, value: "2"}
+            - {name: S3_ENDPOINT, value: "http://seaweedfs.data.svc.cluster.local:8333"}
+            - {name: OLLAMA_URL, value: "http://host.k3d.internal:11434"}
+          envFrom:
+            - secretRef: {name: s3-credentials}

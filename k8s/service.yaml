@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Service
+metadata: {name: command-parser, namespace: app}
+spec:
+  selector: {app: command-parser}
+  ports:
+    - {port: 80, targetPort: 8000}

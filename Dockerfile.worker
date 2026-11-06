@@ -1,0 +1,8 @@
+# Teacher-labelling worker / clean.py image (no torch needed: it only talks to Ollama and S3).
+FROM python:3.11.9-slim
+ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
+WORKDIR /app
+RUN pip install boto3==1.35.20
+COPY worker/ worker/
+COPY prompts/ prompts/
+CMD ["python", "-m", "worker.worker"]

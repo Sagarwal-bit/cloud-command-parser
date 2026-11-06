@@ -1,0 +1,83 @@
+name: ci
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      use_untrained_baseline:
+        description: "Evaluate the untrained EleutherAI/pythia-70m instead of the Release model (demonstrates a failing gate)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  secret-scan:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install ruff==0.6.9
+      - run: ruff check .
+
+  unit-tests:
+    needs: lint
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+
+  evaluate:
+    needs: unit-tests
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - name: Install CPU inference dependencies
+        run: |
+          pip install --extra-index-url https://download.pytorch.org/whl/cpu \
+            torch==2.4.1+cpu transformers==4.44.2 tokenizers==0.19.1 huggingface-hub==0.24.7 \
+            safetensors==0.4.5 numpy==1.26.4 pyyaml==6.0.2 boto3==1.35.20
+      - name: Pick the model (Release asset, or the untrained baseline for the gate demo)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ inputs.use_untrained_baseline }}" = "true" ]; then
+            echo "MODEL=EleutherAI/pythia-70m" >> "$GITHUB_ENV"
+          else
+            gh release download model-release --repo "$GITHUB_REPOSITORY" --pattern 'model-v1.tar.gz' --dir /tmp
+            mkdir -p /tmp/model-v1 && tar -xzf /tmp/model-v1.tar.gz -C /tmp/model-v1
+            (cd /tmp && sha256sum -c "$GITHUB_WORKSPACE/models/v1/model.sha256")
+            echo "MODEL=/tmp/model-v1" >> "$GITHUB_ENV"
+          fi
+      - name: Run model on validation.jsonl and score it
+        run: |
+          python scripts/evaluate.py model --model "$MODEL" --out ci/student_predictions.jsonl
+          cat ci/student_validation.json
+      - uses: actions/upload-artifact@v4
+        with: {name: predictions, path: ci/}
+
+  quality-gate:
+    needs: evaluate
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {name: predictions, path: ci/}
+      - name: Gate on JSON validity
+        run: python tools/score.py ci/student_predictions.jsonl data/validation.jsonl --min-validity 95

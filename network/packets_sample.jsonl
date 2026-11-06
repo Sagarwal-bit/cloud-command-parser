@@ -1,0 +1,6 @@
+{"id": "S01", "direction": "inbound", "protocol": "tcp", "port": 443, "address": "192.0.2.55", "expected": "allow"}
+{"id": "S02", "direction": "inbound", "protocol": "tcp", "port": 22, "address": "192.0.2.55", "expected": "deny"}
+{"id": "S03", "direction": "outbound", "protocol": "tcp", "port": 8000, "address": "10.20.1.1", "expected": "allow"}
+{"id": "S04", "direction": "inbound", "protocol": "tcp", "port": 443, "address": "198.51.100.9", "expected": "deny"}
+{"id": "S05", "direction": "outbound", "protocol": "tcp", "port": 60000, "address": "192.0.2.55", "expected": "allow"}
+{"id": "S06", "direction": "inbound", "protocol": "tcp", "port": 5432, "address": "10.20.5.20", "expected": "deny"}

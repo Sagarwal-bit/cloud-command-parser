@@ -1,0 +1,17 @@
+# secrets / credentials
+.secrets/
+*.env
+secrets.yaml
+!k8s/secrets.example.yaml
+# model weights & archives (published as GitHub Release assets only)
+model_out/
+*.safetensors
+*.bin
+*.pt
+*.tar.gz
+# python / tooling
+__pycache__/
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.pyc

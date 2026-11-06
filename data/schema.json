@@ -1,0 +1,35 @@
+{
+  "description": "Output schema for the command parser. Every output is one JSON object with exactly these four keys.",
+  "keys": ["intent", "date", "time", "place"],
+  "intents": [
+    "alarm_set",
+    "alarm_query",
+    "calendar_set",
+    "calendar_query",
+    "calendar_remove",
+    "weather_query",
+    "datetime_query",
+    "recommendation_events"
+  ],
+  "slots": {
+    "date": "A day or date, for example: today, saturday, the month of may",
+    "time": "A clock time or time expression, for example: seven am, after five hours",
+    "place": "A city or location, for example: london, los angeles"
+  },
+  "slot_rules": [
+    "A slot value is copied exactly as it appears in the command. It is not converted (seven am is not changed to 07:00).",
+    "A slot value is the shortest phrase that carries the meaning, without words such as at, on, in or for.",
+    "A slot the command does not mention is null. Values must never be invented."
+  ],
+  "json_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["intent", "date", "time", "place"],
+    "properties": {
+      "intent": {"enum": ["alarm_set", "alarm_query", "calendar_set", "calendar_query", "calendar_remove", "weather_query", "datetime_query", "recommendation_events"]},
+      "date": {"type": ["string", "null"]},
+      "time": {"type": ["string", "null"]},
+      "place": {"type": ["string", "null"]}
+    }
+  }
+}

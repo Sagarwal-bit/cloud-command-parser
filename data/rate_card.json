@@ -1,0 +1,8 @@
+{
+  "description": "Hypothetical on-demand prices for the cost-estimation exercise. These are not real provider prices.",
+  "currency": "INR",
+  "vcpu_hour": 3.50,
+  "gib_memory_hour": 0.45,
+  "billing_rule": "A replica is billed for its CPU limit and memory limit for every hour it runs, whether or not it is busy.",
+  "formula": "cost_per_1000_requests = (hourly cost of all running replicas / requests served per hour) * 1000"
+}
